@@ -32,7 +32,7 @@ from .discussionsettings import *
 
 ################################### FEATURES ###################################
 # The display name of the platform to be used in templates/emails/etc.
-PLATFORM_NAME = "edX"
+PLATFORM_NAME = "Sokratik"
 
 COURSEWARE_ENABLED = True
 ENABLE_JASMINE = False
@@ -75,7 +75,7 @@ MITX_FEATURES = {
 
     'ENABLE_PSYCHOMETRICS': False,  # real-time psychometrics (eg item response theory analysis in instructor dashboard)
 
-    'ENABLE_DJANGO_ADMIN_SITE': False,  # set true to enable django's admin site, even on prod (e.g. for course ops)
+    'ENABLE_DJANGO_ADMIN_SITE': True,  # set true to enable django's admin site, even on prod (e.g. for course ops)
     'ENABLE_SQL_TRACKING_LOGS': False,
     'ENABLE_LMS_MIGRATION': False,
     'ENABLE_MANUAL_GIT_RELOAD': False,
@@ -135,7 +135,7 @@ MITX_FEATURES = {
 
     # Toggle to indicate use of a custom theme
     'USE_CUSTOM_THEME': False,
-
+    
     # Do autoplay videos for students
     'AUTOPLAY_VIDEOS': True,
 
@@ -482,7 +482,7 @@ MIDDLEWARE_CLASSES = (
     'course_wiki.course_nav.Middleware',
 
     'django.middleware.transaction.TransactionMiddleware',
-    # 'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 
     'django_comment_client.utils.ViewNameMiddleware',
     'codejail.django_integration.ConfigureCodeJailMiddleware',
